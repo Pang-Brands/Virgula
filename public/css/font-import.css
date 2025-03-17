@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'KievitOT';
+    src:
+      url('./fonts/KievitOT-Regular.eot');
+    src:
+      url('./fonts/KievitOT-Regular.eot') format('embedded-opentype'),
+      url('./fonts/KievitOT-Regular.ttf') format('truetype'),
+      url('./fonts/KievitOT-Regular.woff') format('woff'),
+      url('./fonts/KievitOT-Regular.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'KievitOT';
+    src:
+        url('./fonts/KievitOT-Bold.eot');
+    src:
+        url('./fonts/KievitOT-Bold.eot') format('embedded-opentype'),
+        url('./fonts/KievitOT-Bold.ttf') format('truetype'),
+        url('./fonts/KievitOT-Bold.woff') format('woff'),
+        url('./fonts/KievitOT-Bold.svg') format('svg');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KievitOT';
+    src:
+        url('./fonts/KievitOT-ExtraLight.eot');
+    src:
+        url('./fonts/KievitOT-ExtraLight.eot') format('embedded-opentype'),
+        url('./fonts/KievitOT-ExtraLight.ttf') format('truetype'),
+        url('./fonts/KievitOT-ExtraLight.woff') format('woff'),
+        url('./fonts/KievitOT-ExtraLight.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KievitOT';
+    src:
+        url('./fonts/KievitOT-Italic.eot');
+    src:
+        url('./fonts/KievitOT-Italic.eot') format('embedded-opentype'),
+        url('./fonts/KievitOT-Italic.ttf') format('truetype'),
+        url('./fonts/KievitOT-Italic.woff') format('woff'),
+        url('./fonts/KievitOT-Italic.svg') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KievitOT';
+    src: url('./fonts/KievitOT-Medium.eot');
+    src: url('./fonts/KievitOT-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/KievitOT-Medium.woff2') format('woff2'),
+        url('./fonts/KievitOT-Medium.woff') format('woff'),
+        url('./fonts/KievitOT-Medium.ttf') format('truetype'),
+        url('./fonts/KievitOT-Medium.svg#KievitOT-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KievitOT';
+    src: url('./fonts/KievitOT-MediumItalic.eot');
+    src: url('./fonts/KievitOT-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/KievitOT-MediumItalic.woff2') format('woff2'),
+        url('./fonts/KievitOT-MediumItalic.woff') format('woff'),
+        url('./fonts/KievitOT-MediumItalic.ttf') format('truetype'),
+        url('./fonts/KievitOT-MediumItalic.svg#KievitOT-MediumItalic') format('svg');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}

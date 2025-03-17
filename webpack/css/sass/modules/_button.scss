@@ -1,0 +1,35 @@
+.o-btn-default {
+  display: block;
+
+  .o-btn-default__span {
+    color: #fff;
+    font-family: Termina;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 180%;
+  
+    display: inline-flex;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 4px;
+    background: #57479C;
+    transition: background 0.25s ease;
+
+    &:hover {
+      background: #7362b9;
+    }
+  }
+}
+
+@media(min-width: $media-query-desktop) {
+  .o-btn-default {
+    display: block;
+  
+    .o-btn-default__span {
+      font-size: 14px;
+    }
+  }
+}

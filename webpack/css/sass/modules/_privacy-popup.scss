@@ -1,0 +1,112 @@
+.privacy-popup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 0 15px;
+
+  background-color: rgba($black, 0.7);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  @media #{$small-up} {
+    padding: 0 30px;
+  }
+
+  .button {
+    min-width: 150px;
+    height: 40px;
+    font-size: 12px;
+
+    @media (min-width: 400px) {
+      min-width: 170px;
+    }
+
+    + .button {
+      margin-left: 10px;
+
+      @media (min-width: 415px) {
+        margin-left: 15px;
+      }
+
+      @media (min-width: 450px) {
+        margin-left: 30px;
+      }
+    }
+  }
+
+  .privacy-popup__know-more {
+    border: 2px solid #606060;
+    color: $black;
+  }
+
+  .has-not-accept-privacy & {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.privacy-popup-container {
+  padding: 30px 15px;
+  background-color: #fff;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+
+  @media #{$small-up} {
+    padding: 30px;
+  }
+
+  @media #{$large-up} {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.privacy-popup-title {
+  font-size: 14px;
+  font-weight: 400;
+  max-width: 500px;
+  margin: 0 auto;
+  letter-spacing: 1px;
+  text-align: center;
+
+  @media #{$small-up} {
+    font-size: 16px;
+  }
+
+  @media #{$large-up} {
+    text-align: left;
+    margin: 0;
+  }
+
+  @media #{$xlarge-up} {
+    font-size: 18px;
+    max-width: 550px;
+  }
+
+  @media #{$xxlarge-up} {
+    max-width: none;
+  }
+}
+
+.privacy-popup-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  margin-top: 20px;
+
+  @media #{$large-up} {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}

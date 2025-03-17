@@ -1,0 +1,58 @@
+.whatsapp-widget {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 55px;
+  height: 55px;
+
+  background-color: #26d367;
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media #{$large-up} {
+    bottom: 28px;
+    right: 28px;
+  }
+
+  @media #{$xxlarge-up} {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+.whatsapp-widget-counter {
+  position: absolute;
+  top: -5px;
+  right: 2px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 18px;
+  height: 18px;
+
+  background-color: #e52f48;
+  border-radius: 50%;
+  cursor: pointer;
+
+  color: $white;
+  font-size: 14px;
+  font-family: $font-family-graphie;
+  font-weight: 700;
+
+  @media #{$xxlarge-up} {
+    top: -4px;
+    right: 3px;
+
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+  }
+}

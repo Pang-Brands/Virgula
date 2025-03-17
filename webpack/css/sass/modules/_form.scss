@@ -1,0 +1,129 @@
+.form-input,
+textarea {
+  width: 100%;
+  outline: 0;
+
+  margin: 20px 0 0;
+  padding: 15px 0;
+
+  border: 0;
+  border-bottom: 2px solid #bababa;
+
+  color: rgba(#242424, 0.5);
+  font-family: $font-family-graphie;
+
+  &::placeholder {
+    color: rgba(#242424, 0.5);
+
+    .section--dark & {
+      color: $white;
+      opacity: 0.6;
+    }
+  }
+
+  .section--dark & {
+    color: $white;
+    background-color: transparent;
+  }
+}
+
+input,
+select,
+textarea {
+  font-size: 18px;
+  border-radius: 0;
+
+  &:-webkit-autofill {
+    -webkit-text-fill-color: $black;
+    transition: background-color 5000s ease-in-out 0s;
+
+    .section--dark & {
+      -webkit-text-fill-color: $white;
+    }
+  }
+}
+
+select {
+  appearance: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  margin: 20px 0 0;
+  padding: 15px 0;
+
+  color: $white;
+  font-family: $font-family-graphie;
+
+  background-color: transparent;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.557' height='11.362'%3E%3Cpath data-name='Caminho 362' d='M21.039.543l-10.262 9.783L.517.543' fill='none' stroke='%23fff' stroke-miterlimit='10' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: 100% center;
+  border: 0;
+  border-bottom: 2px solid #bababa;
+  cursor: pointer;
+
+  option {
+    color: $black;
+  }
+}
+
+textarea {
+  resize: none;
+  height: 175px;
+}
+
+.form-row {
+  padding-top: 30px;
+
+  @media (min-width: 500px) {
+    display: flex;
+    align-items: center;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+
+    @media (min-width: 500px) {
+      margin-right: 60px;
+      margin-bottom: 0;
+    }
+  }
+
+  label {
+    color: $white;
+    font-size: 16px;
+    line-height: 1;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+}
+
+.form-radios {
+  &,
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  input {
+    border-radius: 50%;
+  }
+
+  div {
+    + div {
+      margin-left: 30px;
+    }
+  }
+}
+
+[type="checkbox"],
+[type="radio"] {
+  width: 20px;
+  height: 20px;
+  appearance: auto;
+  cursor: pointer;
+}

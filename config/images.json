@@ -1,0 +1,20 @@
+{
+  "small_thumb": {
+    "width": 252,
+    "height": 177,
+    "cropped": true,
+    "default": true
+  },
+  "program_small_thumb": {
+    "width": 120,
+    "height": 120,
+    "cropped": false,
+    "default": true
+  },
+  "clipping_thumb": {
+    "width": 334,
+    "height": 100,
+    "cropped": false,
+    "default": true
+  }
+}

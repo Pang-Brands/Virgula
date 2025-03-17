@@ -1,0 +1,40 @@
+// contextual variables
+// --------------------
+$media-query-mobile: 360px;
+$media-query-tablet: 720px;
+$media-query-desktop: 1280px;
+$media-query-desktop-low: 1024px;
+$media-query-desktop-high: 1440px;
+
+$container-tablet: 640px;
+$container-desktop: 1200px;
+$container-desktop-low: 1000px;
+
+$columns: 12;
+$gutter: 16px;
+$gutter-no: 0;
+
+// animations
+// ----------
+$anim-bounce: cubic-bezier(0.800, -0.375, 0.275, 1.455);
+
+//Project Colors
+$c-red: #ec0000;
+$c-dark-red: #990000;
+$c-white: #FFF;
+$c-gray20: #EEEEEE;
+$c-gray60: #A8ACAD;
+$c-gray80: #6F7779;
+$c-gray100: #282828;
+
+$c-gradient: linear-gradient(180deg, #990000 0%, #EC0000 100%);
+$c-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+$c-shadow-hover: 0px 4px 4px rgba(0, 0, 0, 0.1);
+
+//Project Header height
+$header-height-mobile: 80px;
+$header-height-tablet-desktop: 100px;
+
+
+//Others Colors
+$c-42i: #FFAA00;

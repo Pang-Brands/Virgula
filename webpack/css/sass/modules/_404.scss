@@ -1,0 +1,89 @@
+.c-404 {
+  padding: 5rem 0;
+  background-color: #000;
+  background-image: url('/wp-content/themes/montebravo-2025/public/images/grafismo-full-branco.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.c-404__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 496px;
+  margin: 0 auto;
+
+  h1 {
+    color: var(--Roxo-claro-main, #8F7ED7);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Termina;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 112px */
+  }
+
+  h2 {
+    color: var(--Roxo-claro-main, #8F7ED7);
+    text-align: center;
+
+    /* a. Heading/Mobile/H3: bold */
+    font-family: Termina;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    /* 30.8px */
+
+    margin-top: -1rem;
+  }
+
+  p {
+    color: var(--Branco, #FFF);
+    text-align: center;
+
+    /* b. Body/Mobile/Regular */
+    font-family: Termina;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%;
+    /* 23.4px */
+
+    margin: 2.5rem 0;
+  }
+}
+
+@media all and (min-width: $media-query-desktop) {
+
+  .c-404 {
+    padding: 10rem 0;
+    background-color: #000;
+    background-attachment: fixed;
+  }
+
+  .c-404__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      font-size: 120px;
+    }
+
+    h2 {
+      font-size: 29px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+}

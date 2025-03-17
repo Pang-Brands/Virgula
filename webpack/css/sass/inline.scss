@@ -1,0 +1,38 @@
+
+@charset "UTF-8";
+
+
+// $base-url: 'http://localhost:8888/wp-mb-2025';
+$base-url: 'http://montebravo.levante.cx';
+
+
+
+$ff-path: '#{$base-url}/wp-content/themes/montebravo-2025/webpack/css/sass/fonts';
+$img-path: '#{$base-url}/wp-content/themes/montebravo-2025/public/images';
+
+@import 'http://montebravo.levante.cx/wp-content/themes/montebravo-2025/node_modules/aos/dist/aos.css';
+
+@import "base/functions";
+@import "base/media-queries";
+@import "base/settings";
+@import "base/base";
+
+
+@import "base/mixins",
+        "base/var-layout",
+        "base/var-typography",
+        "base/container",
+        "base/typography",
+        "base/utils",
+        "base/icons",
+        "base/wp-base",
+        "base/wp-editor";
+
+@import "modules/header/nav";
+@import "modules/header/menu-mobile";
+@import "modules/header/menu-icon-animation";
+
+@import "modules/button";
+
+@import "modules/footer";
+@import "modules/404";

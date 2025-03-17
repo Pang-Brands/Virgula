@@ -1,0 +1,131 @@
+.blog-body {
+  .most-viewed {
+    padding-top: 20px;
+
+    @media #{$medium-up} {
+      padding-top: 0;
+    }
+  }
+}
+
+.most-viewed-videos {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  margin-bottom: 60px;
+
+  @media #{$large-up} {
+    grid-template-columns: 1fr 445px;
+    padding-top: 25px;
+    grid-gap: 15px;
+  }
+
+  @media #{$xlarge-up} {
+    grid-template-columns: 1fr 500px;
+  }
+}
+
+.most-viewed-featured {
+  position: relative;
+  display: none;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  background-color: #e5e5e5;
+
+  @media #{$large-up} {
+    padding-bottom: 0;
+    height: 100%;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.most-viewed-featured--active {
+  display: block;
+}
+
+.most-viewed-toggles {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, max-content);
+  grid-gap: 15px;
+}
+
+.most-viewed-toggle {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-gap: 15px;
+  cursor: pointer;
+  // opacity: 0.8;
+  opacity: 1;
+
+  @media #{$small-up} {
+    grid-template-columns: 240px 1fr;
+  }
+
+  @media #{$large-up} {
+    grid-template-columns: 180px 1fr;
+  }
+
+  @media #{$xlarge-up} {
+    grid-template-columns: 200px 1fr;
+  }
+
+  @media #{$xxlarge-up} {
+    grid-template-columns: 240px 1fr;
+  }
+
+  &:hover {
+    .most-viewed-toggle__thumb img {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// .most-viewed-toggle--active {
+//   opacity: 1;
+// }
+
+.most-viewed-toggle__thumb {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: #e5e5e5;
+  border-radius: 5px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.3s;
+  }
+}
+
+.most-viewed-toggle__category,
+.most-viewed-toggle__title {
+  font-family: $font-family-graphie;
+}
+
+.most-viewed-toggle__category {
+  font-size: 12px;
+  color: #57479c;
+  margin-bottom: 5px;
+}
+
+.most-viewed-toggle__title {
+  font-size: 18px;
+}

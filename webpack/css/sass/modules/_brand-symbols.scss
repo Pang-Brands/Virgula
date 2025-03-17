@@ -1,0 +1,25 @@
+.brand-symbols {
+  display: flex;
+  align-items: center;
+
+  svg {
+    fill: #8f7ed7;
+    max-height: 28px;
+
+    + svg {
+      margin-left: 25px;
+    }
+  }
+
+  &--dark-blue {
+    svg {
+      fill: #57479c;
+    }
+  }
+
+  &--white {
+    svg {
+      fill: $white;
+    }
+  }
+}
