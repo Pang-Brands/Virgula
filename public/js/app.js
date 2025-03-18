@@ -11,152 +11,6 @@
 
 /***/ }),
 
-/***/ "./webpack/js/scripts/menu/footerSubMenu.js":
-/*!**************************************************!*\
-  !*** ./webpack/js/scripts/menu/footerSubMenu.js ***!
-  \**************************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-    value: true
-}));
-
-exports["default"] = function () {
-    var subMenu = document.querySelectorAll(".c-footer-menu__main-item.menu-item-has-children");
-
-    // console.log(subMenu);
-
-    subMenu.forEach(function (menu) {
-        menu.addEventListener("click", function (e) {
-            // console.log('teste');
-            var isActive = menu.classList.contains("ativo");
-            subMenu.forEach(function (item) {
-                return item.classList.remove("ativo");
-            });
-            if (!isActive) {
-                menu.classList.add("ativo");
-                e.preventDefault();
-            } else {
-                menu.classList.remove("ativo");
-                e.preventDefault();
-            }
-        });
-    });
-};
-
-/***/ }),
-
-/***/ "./webpack/js/scripts/menu/mobileMenu.js":
-/*!***********************************************!*\
-  !*** ./webpack/js/scripts/menu/mobileMenu.js ***!
-  \***********************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-    value: true
-}));
-
-exports["default"] = function () {
-    var hamburguer = document.querySelector(".hamburguer-menu");
-    var listSuMenu = document.querySelectorAll(".c-submenu-trigger-wrapper");
-    var listMenu = document.querySelector(".menu-mobile");
-
-    function adjustHeight() {
-        var listMenu = document.querySelector(".menu-mobile");
-        listMenu.style.height = window.innerHeight + "px";
-    }
-
-    hamburguer.addEventListener("click", function () {
-        hamburguer.classList.toggle("close-menu");
-        listMenu.classList.toggle("active");
-        listSuMenu.forEach(function (menu) {
-            return menu.classList.remove("ativo");
-        });
-
-        if (listMenu.classList.contains("active")) {
-            document.querySelector("html").style.overflowY = "hidden";
-            window.addEventListener("resize", adjustHeight);
-        } else {
-            document.querySelector("html").style.overflowY = "inherit";
-        }
-    });
-};
-
-/***/ }),
-
-/***/ "./webpack/js/scripts/menu/subMenu.js":
-/*!********************************************!*\
-  !*** ./webpack/js/scripts/menu/subMenu.js ***!
-  \********************************************/
-/***/ ((__unused_webpack_module, exports) => {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", ({
-    value: true
-}));
-
-exports["default"] = function () {
-    var listMenu = document.querySelectorAll(".c-submenu-trigger-wrapper");
-    var subMenu = document.querySelectorAll(".menu-mobile .c-main-menu__item.menu-item-has-children");
-    var closeMenu = document.querySelectorAll(".js-close-submenu");
-
-    subMenu.forEach(function (menu, index) {
-        menu.addEventListener("click", function (e) {
-            var isActive = listMenu[index].classList.contains("ativo");
-            listMenu.forEach(function (item) {
-                return item.classList.remove("ativo");
-            });
-            if (!isActive) {
-                listMenu[index].classList.add("ativo");
-                e.preventDefault();
-            }
-        });
-    });
-
-    closeMenu.forEach(function (item, i) {
-        item.addEventListener("click", function (e) {
-            e.stopPropagation();
-            listMenu[i].classList.remove("ativo");
-        });
-    });
-};
-
-/***/ }),
-
-/***/ "./webpack/css/sass/inline.scss":
-/*!**************************************!*\
-  !*** ./webpack/css/sass/inline.scss ***!
-  \**************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./webpack/css/sass/main.scss":
-/*!************************************!*\
-  !*** ./webpack/css/sass/main.scss ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
 /***/ "./node_modules/rellax/rellax.js":
 /*!***************************************!*\
   !*** ./node_modules/rellax/rellax.js ***!
@@ -657,6 +511,147 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 }));
 
 
+/***/ }),
+
+/***/ "./webpack/css/sass/inline.scss":
+/*!**************************************!*\
+  !*** ./webpack/css/sass/inline.scss ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./webpack/css/sass/main.scss":
+/*!************************************!*\
+  !*** ./webpack/css/sass/main.scss ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./webpack/js/scripts/menu/footerSubMenu.js":
+/*!**************************************************!*\
+  !*** ./webpack/js/scripts/menu/footerSubMenu.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var subMenu = document.querySelectorAll(".c-footer-menu__main-item.menu-item-has-children");
+
+  // console.log(subMenu);
+
+  subMenu.forEach(function (menu) {
+    menu.addEventListener("click", function (e) {
+      // console.log('teste');
+      var isActive = menu.classList.contains("ativo");
+      subMenu.forEach(function (item) {
+        return item.classList.remove("ativo");
+      });
+      if (!isActive) {
+        menu.classList.add("ativo");
+        e.preventDefault();
+      } else {
+        menu.classList.remove("ativo");
+        e.preventDefault();
+      }
+    });
+  });
+}
+
+/***/ }),
+
+/***/ "./webpack/js/scripts/menu/mobileMenu.js":
+/*!***********************************************!*\
+  !*** ./webpack/js/scripts/menu/mobileMenu.js ***!
+  \***********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var hamburguer = document.querySelector(".hamburguer-menu");
+  var listSuMenu = document.querySelectorAll(".c-submenu-trigger-wrapper");
+  var listMenu = document.querySelector(".menu-mobile");
+  function adjustHeight() {
+    var listMenu = document.querySelector(".menu-mobile");
+    listMenu.style.height = window.innerHeight + "px";
+  }
+  hamburguer.addEventListener("click", function () {
+    hamburguer.classList.toggle("close-menu");
+    listMenu.classList.toggle("active");
+    listSuMenu.forEach(function (menu) {
+      return menu.classList.remove("ativo");
+    });
+    if (listMenu.classList.contains("active")) {
+      document.querySelector("html").style.overflowY = "hidden";
+      window.addEventListener("resize", adjustHeight);
+    } else {
+      document.querySelector("html").style.overflowY = "inherit";
+    }
+  });
+}
+
+/***/ }),
+
+/***/ "./webpack/js/scripts/menu/subMenu.js":
+/*!********************************************!*\
+  !*** ./webpack/js/scripts/menu/subMenu.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* export default binding */ __WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+
+
+/* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
+  var listMenu = document.querySelectorAll(".c-submenu-trigger-wrapper");
+  var subMenu = document.querySelectorAll(".menu-mobile .c-main-menu__item.menu-item-has-children");
+  var closeMenu = document.querySelectorAll(".js-close-submenu");
+  subMenu.forEach(function (menu, index) {
+    menu.addEventListener("click", function (e) {
+      var isActive = listMenu[index].classList.contains("ativo");
+      listMenu.forEach(function (item) {
+        return item.classList.remove("ativo");
+      });
+      if (!isActive) {
+        listMenu[index].classList.add("ativo");
+        e.preventDefault();
+      }
+    });
+  });
+  closeMenu.forEach(function (item, i) {
+    item.addEventListener("click", function (e) {
+      e.stopPropagation();
+      listMenu[i].classList.remove("ativo");
+    });
+  });
+}
+
 /***/ })
 
 /******/ 	});
@@ -686,6 +681,30 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -696,6 +715,11 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
 /******/ 				if (typeof window === 'object') return window;
 /******/ 			}
 /******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
@@ -717,50 +741,35 @@ var __webpack_exports__ = {};
 /*!***************************!*\
   !*** ./webpack/js/app.js ***!
   \***************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
+/* harmony import */ var aos__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(aos__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
+/* harmony import */ var rellax__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(rellax__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _css_sass_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../css/sass/main.scss */ "./webpack/css/sass/main.scss");
+/* harmony import */ var _css_sass_inline_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../css/sass/inline.scss */ "./webpack/css/sass/inline.scss");
+/* harmony import */ var _scripts_menu_mobileMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scripts/menu/mobileMenu */ "./webpack/js/scripts/menu/mobileMenu.js");
+/* harmony import */ var _scripts_menu_subMenu__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scripts/menu/subMenu */ "./webpack/js/scripts/menu/subMenu.js");
+/* harmony import */ var _scripts_menu_footerSubMenu__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./scripts/menu/footerSubMenu */ "./webpack/js/scripts/menu/footerSubMenu.js");
 
 
-var _aos = __webpack_require__(/*! aos */ "./node_modules/aos/dist/aos.js");
 
-var _aos2 = _interopRequireDefault(_aos);
 
-var _rellax = __webpack_require__(/*! rellax */ "./node_modules/rellax/rellax.js");
 
-var _rellax2 = _interopRequireDefault(_rellax);
 
-var _main = __webpack_require__(/*! ../css/sass/main.scss */ "./webpack/css/sass/main.scss");
-
-var _main2 = _interopRequireDefault(_main);
-
-var _inline = __webpack_require__(/*! ../css/sass/inline.scss */ "./webpack/css/sass/inline.scss");
-
-var _inline2 = _interopRequireDefault(_inline);
-
-var _mobileMenu = __webpack_require__(/*! ./scripts/menu/mobileMenu */ "./webpack/js/scripts/menu/mobileMenu.js");
-
-var _mobileMenu2 = _interopRequireDefault(_mobileMenu);
-
-var _subMenu = __webpack_require__(/*! ./scripts/menu/subMenu */ "./webpack/js/scripts/menu/subMenu.js");
-
-var _subMenu2 = _interopRequireDefault(_subMenu);
-
-var _footerSubMenu = __webpack_require__(/*! ./scripts/menu/footerSubMenu */ "./webpack/js/scripts/menu/footerSubMenu.js");
-
-var _footerSubMenu2 = _interopRequireDefault(_footerSubMenu);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_aos2.default.init({
-    once: true,
-    delay: 50
+aos__WEBPACK_IMPORTED_MODULE_0___default().init({
+  once: true,
+  delay: 50
 });
-
 var windowWidth = window.innerWidth;
 if (windowWidth >= 1024) {
-    var rellax = new _rellax2.default('.js-rellax');
+  var rellax = new (rellax__WEBPACK_IMPORTED_MODULE_1___default())('.js-rellax');
 }
 
 // import segmentCookieControl from './scripts/segmentCookieControl';
 // import toggleSubMenu from './scripts/toggleSubMenu';
+
+
 
 // import toogleModal from './scripts/toogleModal';
 // import utils from './scripts/lib/utils';
@@ -789,10 +798,9 @@ if (windowWidth >= 1024) {
 // redirect404();
 // moreScroll();
 
-
-(0, _mobileMenu2.default)();
-(0, _subMenu2.default)();
-(0, _footerSubMenu2.default)();
+(0,_scripts_menu_mobileMenu__WEBPACK_IMPORTED_MODULE_4__["default"])();
+(0,_scripts_menu_subMenu__WEBPACK_IMPORTED_MODULE_5__["default"])();
+(0,_scripts_menu_footerSubMenu__WEBPACK_IMPORTED_MODULE_6__["default"])();
 })();
 
 /******/ })()
