@@ -592,24 +592,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ function __WEBPACK_DEFAULT_EXPORT__() {
   var hamburguer = document.querySelector(".hamburguer-menu");
-  var listSuMenu = document.querySelectorAll(".c-submenu-trigger-wrapper");
-  var listMenu = document.querySelector(".menu-mobile");
-  function adjustHeight() {
-    var listMenu = document.querySelector(".menu-mobile");
-    listMenu.style.height = window.innerHeight + "px";
-  }
+  var menu = document.querySelector(".menu");
   hamburguer.addEventListener("click", function () {
-    hamburguer.classList.toggle("close-menu");
-    listMenu.classList.toggle("active");
-    listSuMenu.forEach(function (menu) {
-      return menu.classList.remove("ativo");
-    });
-    if (listMenu.classList.contains("active")) {
-      document.querySelector("html").style.overflowY = "hidden";
-      window.addEventListener("resize", adjustHeight);
-    } else {
-      document.querySelector("html").style.overflowY = "inherit";
-    }
+    hamburguer.classList.toggle("active");
+    menu.classList.toggle("active");
   });
 }
 
@@ -763,7 +749,7 @@ aos__WEBPACK_IMPORTED_MODULE_0___default().init({
 });
 var windowWidth = window.innerWidth;
 if (windowWidth >= 1024) {
-  var rellax = new (rellax__WEBPACK_IMPORTED_MODULE_1___default())('.js-rellax');
+  var rellax = new (rellax__WEBPACK_IMPORTED_MODULE_1___default())(".js-rellax");
 }
 
 // import segmentCookieControl from './scripts/segmentCookieControl';

@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 
 
@@ -19,18 +18,20 @@ $img-path: '#{$base-url}/wp-content/themes/montebravo-2025/public/images';
 
 
 @import "base/mixins",
-        "base/var-layout",
-        "base/var-typography",
-        "base/container",
-        "base/typography",
-        "base/utils",
-        "base/icons",
-        "base/wp-base",
-        "base/wp-editor";
+"base/var-layout",
+"base/var-typography",
+"base/container",
+"base/typography",
+"base/utils",
+"base/icons",
+"base/wp-base",
+"base/wp-editor";
 
 @import "modules/header/nav";
 @import "modules/header/menu-mobile";
 @import "modules/header/menu-icon-animation";
+
+@import "modules/watermark/watermark";
 
 @import "modules/button";
 

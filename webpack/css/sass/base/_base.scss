@@ -6,7 +6,6 @@
 
 html {
   height: -webkit-fill-available;
-  background: $white;
   overflow-y: inherit;
 }
 
@@ -18,7 +17,7 @@ body {
   min-height: 100vh;
   min-height: -webkit-fill-available;
 
-  color: $black;
+  background-color: #565A5B;
   font-family: $font-family-graphie;
   font-size: 16px;
   font-weight: 400;
@@ -98,7 +97,8 @@ p {
 }
 
 .main {
-  flex: 1 0 auto; /* 2 */
+  flex: 1 0 auto;
+  /* 2 */
   width: 100%;
 }
 
@@ -122,8 +122,7 @@ p {
 
 .gradient-text {
   display: inline !important;
-  background: transparent linear-gradient(98deg, #574a9a 0%, #8f80d5 100%) 0% 0%
-    no-repeat padding-box;
+  background: transparent linear-gradient(98deg, #574a9a 0%, #8f80d5 100%) 0% 0% no-repeat padding-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-box-decoration-break: clone;

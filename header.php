@@ -14,7 +14,6 @@ $main_menu = wp_nav_menu(array(
   'container' => '',
   'menu_class' => 'c-main-menu__list',
   'echo' => false,
-  'walker' => new Main_Menu_Walker()
 ));
 
 $title = get_the_title();
@@ -34,7 +33,6 @@ $add_to_body_class = '';
   <meta name="theme-color" content="#fff">
   <meta name="format-detection" content="telephone=no">
 
-  <?php $tpl_engine->partial('template/favicons'); ?>
   <link rel="preload" href="<?php bloginfo('template_url'); ?>/public/css/font-import.css?ver=<?php echo THEME_VERSION; ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/public/css/font-import.css?ver=<?php echo THEME_VERSION; ?>">
@@ -69,6 +67,17 @@ $add_to_body_class = '';
   <header class="o-header">
     <div class="s-container s-container--header">
       <div class="o-header__content">
+        <div class="hamburguer-menu ">
+          <div class="open">
+            <?php $tpl_engine->svg('hamburguer') ?>
+          </div>
+          <div class="close">
+            <?php $tpl_engine->svg('close') ?>
+          </div>
+        </div>
+        <div class="menu">
+          <?= $main_menu ?>
+        </div>
       </div>
     </div>
   </header>

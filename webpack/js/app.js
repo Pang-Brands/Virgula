@@ -1,20 +1,18 @@
-'use strict';
+"use strict";
 import AOS from "aos";
-import Rellax from 'rellax';
-import main from '../css/sass/main.scss';
-import inline from '../css/sass/inline.scss';
+import Rellax from "rellax";
+import main from "../css/sass/main.scss";
+import inline from "../css/sass/inline.scss";
 
 AOS.init({
     once: true,
-    delay: 50
+    delay: 50,
 });
 
 const windowWidth = window.innerWidth;
 if (windowWidth >= 1024) {
-    const rellax = new Rellax('.js-rellax');
+    const rellax = new Rellax(".js-rellax");
 }
-
-
 
 // import segmentCookieControl from './scripts/segmentCookieControl';
 // import toggleSubMenu from './scripts/toggleSubMenu';
@@ -47,8 +45,6 @@ import footerSubMenu from "./scripts/menu/footerSubMenu";
 
 // redirect404();
 // moreScroll();
-
-
 
 mobileMenu();
 subMenu();
